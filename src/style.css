@@ -1,0 +1,157 @@
+html {
+    scroll-behavior: smooth;
+}
+body, ul, p, h1, h2, h3, figure, span, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+}
+header {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    height: 40px;
+    box-shadow: 1px 0 8px 1px rgba(0,0,0,.25);
+    background-color: #fff;
+    z-index: 9999;
+}
+
+.container {
+    margin: 0 auto;
+    width: 90vw;
+}
+
+.container .section {
+    padding: 50px 0;
+    border-bottom: 2px dashed rgba(0,0,0, .5);
+}
+
+
+.header-inner .container nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-inner .container nav a {
+    text-decoration-line: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* .header-inner .container nav a:hover {
+    text-decoration-line: underline;
+} */
+
+
+#introduction {
+    padding: 10px 30px 30px;
+    text-align: center;
+}
+
+#profile {
+    box-shadow: 1px 1px 8px 1px rgba(0,0,0,.25);
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.about-inner h2 {
+    text-align: center;
+    margin: 0;
+}
+
+.about-inner li {
+    list-style: none;
+    font-size: 12px;
+}
+
+.about-inner span {
+    padding-left: 10px;
+}
+
+#skills h2 {
+    text-align: center;
+}
+
+.skills-list-box {
+    margin: 0 auto;
+    padding: 32px 30px 0;
+    /* padding-top: 25px;
+    padding-left: 25px; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+    column-gap: 35px;
+    row-gap: 40px;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.skills-list-box li {
+    width: 128px;
+    height: 128px;
+}
+
+.skills-list-box li svg {
+    border-radius: 12px;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.projects-inner {
+    width: 100%;
+}
+
+.projects-inner .projects-list-box li figure{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 32px 0 0;
+}
+
+.pj-info {
+    padding-left: 16px;
+}
+
+.pj-info ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.pj-info li {
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.pj-info ul li svg {
+    width: 24px;
+    height: 24px;
+}
+
+footer .footer-inner {
+    background-color: #2d2f37;
+}
+
+footer .footer-inner .container{
+    text-align: center;
+    height: 40px;
+    padding: 20px;
+    font-size: 12px;
+    color: #fff;
+    line-height: 40px;
+}
+
+@media (min-width: 768px) {
+    header {
+        height: 80px;
+    }
+}
