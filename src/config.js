@@ -96,7 +96,7 @@ const config = {
         {
             TITLE: "포트폴리오",
             INFO: "포트폴리오 웹페이지입니다.",
-            LINK: "",
+            LINK: "https://github.com/hubintheroot/portfolio",
             IMG_PATH: "./src/imgs/portfolio_img.jpg",
             USE_SKILLS: ['HTML', 'CSS', 'JAVASCRIPT'],
         },
