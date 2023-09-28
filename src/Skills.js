@@ -1,4 +1,5 @@
 import config from './config.js';
+import DefaultContent from './DefaultContent.js';
 
 const { LOGOS } = config;
 
@@ -7,14 +8,13 @@ class Skills {
     data = null;
 
     constructor($target) {
-        $target.innerHTML = `
-        <h2>SKILLS</h2>
-        <div class=skills-inner>
-        <ul class="skills-list-box">
-        </ul>
-        </div>
-        `;
+        new DefaultContent({
+            $target,
+            data: "skills"
+        });
+
         this.$skills = document.querySelector('.skills-list-box');
+        
         this.setState(config.MY_SKILLS);
     }
 

@@ -1,4 +1,5 @@
 import config from "./config.js";
+import DefaultContent from "./DefaultContent.js";
 
 const { LOGOS } = config;
 
@@ -7,13 +8,11 @@ class Projects {
     data = null;
     
     constructor($target) {
-        $target.innerHTML = `
-        <h2>PROJECTS</h2>
-        <div class="projects-inner">
-        <ul class="projects-list-box">
-        </ul>
-        </div>
-        `;
+        new DefaultContent({
+            $target,
+            data: "projects"
+        });
+
         this.$projects = document.querySelector('.projects-list-box');
         
         this.setState(config.MY_PROJECTS);
