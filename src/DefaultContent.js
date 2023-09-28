@@ -25,8 +25,6 @@ class DefaultContent {
             <ul class="${this.data.name.className}-list-box"></ul>
         </div>
         `
-
-        console.log(this.data.$target);
     }
 }
 
