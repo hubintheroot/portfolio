@@ -124,6 +124,14 @@ header {
     align-items: center;
 }
 
+.projects-inner .git-logo {
+    margin-top: 6px;
+    margin-left: 16px;
+    display: block;
+    width: 95.5px;
+    height: 28px;
+}
+
 .pj-info {
     padding-left: 16px;
 }
@@ -141,7 +149,7 @@ header {
 .pj-info ul li svg {
     width: 24px;
     height: 24px;
-}
+} 
 
 footer .footer-inner {
     background-color: #2d2f37;

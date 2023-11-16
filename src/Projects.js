@@ -21,19 +21,20 @@ class Projects {
     addInfo() {
         this.$projects.innerHTML = this.data.map((project) => `
         <li class="project-info">
-            <a href="${project.LINK}">
-                <figure>
-                    <div class="img-container"><img src="${project.IMG_PATH}" width="128" height="128"></div>
-                    <figcaption class="pj-info">
-                        <h3>${project.TITLE}</h3>
-                        <p>${project.INFO}</p>
-                        <ul>` +
-                        project.USE_SKILLS.map((skill) => `
-                            <li>${LOGOS[skill]}</li>
-                        `).join('') +
-                        `</ul>
-                    </figcaption>
-                </figure>
+        <figure>
+            <div class="img-container"><img src="${project.IMG_PATH}" width="128" height="128"></div>
+            <figcaption class="pj-info">
+                <h3>${project.TITLE}</h3>
+                <p>${project.INFO}</p>
+                <ul>` +
+                project.USE_SKILLS.map((skill) => `
+                    <li>${LOGOS[skill]}</li>
+                `).join('') +
+                `</ul>
+            </figcaption>
+        </figure>
+            <a href="${project.LINK}" class="git-logo" target="blank" title="깃허브로 이동하기" >
+            <img alt="GitHub" src ="https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge&logo=GitHub&logoColor=white"/>
             </a>
         </li>
         `).join('');
