@@ -1,3 +1,13 @@
+:root {
+    --white-color : #fff;
+    --black-color : #000;
+    --transparent-white-color : rgba(255,255,255,.5);
+    --transparent-black-color-5 : rgba(0,0,0,.5);
+    --transparent-black-color-8 : rgba(10, 11, 16,.8);
+}
+a {
+    color: var(--white-color)
+}
 html {
     scroll-behavior: smooth;
 }
@@ -6,7 +16,6 @@ body, ul, p, h1, h2, h3, figure, span, a {
     padding: 0;
     list-style: none;
     text-decoration: none;
-    color: #000;
 }
 header {
     position: sticky;
@@ -16,13 +25,22 @@ header {
     top: 0;
     height: 40px;
     box-shadow: 1px 0 8px 1px rgba(0,0,0,.25);
-    background-color: #fff;
+    background-color: var(--white-color);
     z-index: 9999;
 }
 
 .container {
     margin: 0 auto;
     width: 90vw;
+    position: relative;
+    z-index: 2;
+}
+
+.section > div {
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: var(--transparent-white-color);
+    margin-bottom: 10px;
 }
 
 .container .section {
@@ -38,18 +56,10 @@ header {
 
 .header-inner .container nav a {
     text-decoration-line: none;
-    color: #000;
+    color: var(--black-color);
     font-size: 16px;
     font-weight: bold;
 }
-
-.header-inner .container div {
-    display: none;
-}
-
-/* .header-inner .container nav a:hover {
-    text-decoration-line: underline;
-} */
 
 .section-header {
     width: 100%;
@@ -82,7 +92,7 @@ header {
 
 .skills-list-box {
     margin: 0 auto;
-    padding: 32px 30px 0;
+    padding: 32px 30px;
     /* padding-top: 25px;
     padding-left: 25px; */
     display: grid;
@@ -152,7 +162,9 @@ header {
 } 
 
 footer .footer-inner {
+    position: relative;
     background-color: #2d2f37;
+    
 }
 
 footer .footer-inner .container{
@@ -160,9 +172,21 @@ footer .footer-inner .container{
     height: 40px;
     padding: 20px;
     font-size: 12px;
-    color: #fff;
+    color: var(--white-color);
     line-height: 40px;
 }
+
+.canvas-container {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
 
 @media (min-width: 768px) {
     header {
@@ -193,9 +217,13 @@ footer .footer-inner .container{
     .header-inner .container nav a:after {
         display: block;
         content: '';
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid var(--black-color);
         transform: scaleX(0);
         transition: transform .2s ease-in-out;
+    }
+    
+    .header-inner .container nav .white-underLine:after {
+        border-bottom: 1px solid var(--white-color);
     }
 
     .header-inner .container nav a:hover:after {
