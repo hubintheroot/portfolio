@@ -19,8 +19,7 @@ if (checkXMas()) {
 function checkXMas() {
     const date = new Date();
     const month = date.getUTCMonth() + 1;
-    const day = date.getUTCDate();
-    if (month === 12 && day <= 25) {
+    if (month === 12) {
         return true;
     }
     return false;
